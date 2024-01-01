@@ -3,16 +3,13 @@ const path = require('path');
 
 // Set the start and end dates for contributions
 const startDate = new Date('2024-01-01');
-const endDate = new Date('2024-12-31');
-
-// Frequency of commits per day (higher number = more green squares)
-const commitsPerDay = 3;
+const endDate = new Date('2024-01-31');
 
 // Repository directory
 const repoDir = 'C:/Users/usman/Desktop/Portfolio'; // Replace with the path to your local repository
 
 // GitHub repository URL
-const repoUrl = 'https://github.com/usman8786/MuhammadUsman.git';
+const repoUrl = 'https://github.com/usman8786/M-Usman.git';
 
 // Navigate to the repository directory
 process.chdir(repoDir);
@@ -35,10 +32,18 @@ const runGitCommand = (command) => {
     }
 };
 
+// Generate a random number between min and max (inclusive)
+const getRandomInt = (min, max) => {
+    return Math.floor(Math.random() * (max - min + 1)) + min;
+};
+
 // Loop through each day in the date range
 let currentDate = startDate;
 while (currentDate <= endDate) {
-    for (let i = 0; i < commitsPerDay; i++) {
+    // Randomize the number of commits for this day between 0 and 10
+    const commitsToday = getRandomInt(0, 10);  // Some days will have 0 commits
+    
+    for (let i = 0; i < commitsToday; i++) {
         // Create a dummy file to commit
         runGitCommand(`echo "Commit on ${currentDate.toISOString()}" >> dummy_file.txt`);
         
