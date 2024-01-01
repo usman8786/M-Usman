@@ -2,8 +2,8 @@ const { execSync } = require('child_process');
 const path = require('path');
 
 // Set the start and end dates for contributions
-const startDate = new Date('2020-01-01');
-const endDate = new Date('2020-12-31');
+const startDate = new Date('2024-01-01');
+const endDate = new Date('2024-12-31');
 
 // Frequency of commits per day (higher number = more green squares)
 const commitsPerDay = 3;
