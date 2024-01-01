@@ -3,7 +3,7 @@ const path = require('path');
 
 // Set the start and end dates for contributions
 const startDate = new Date('2024-01-01');
-const endDate = new Date('2024-01-31');
+const endDate = new Date('2024-11-07');
 
 // Repository directory
 const repoDir = 'C:/Users/usman/Desktop/Portfolio'; // Replace with the path to your local repository
