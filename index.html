@@ -4,9 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Muhammad Usman's Portfolio</title>
-    <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700|Roboto:400,500&display=swap" rel="stylesheet">
-    <!-- CSS Reset and Custom Styles -->
     <style>
         /* Reset CSS */
         * {
@@ -25,6 +23,13 @@
             color: #fff;
             padding: 5em 2em;
             text-align: center;
+        }
+        header img {
+            width: 180px;
+            height: 180px;
+            border-radius: 50%;
+            border: 4px solid #ffdd57;
+            margin-bottom: 1em;
         }
         header h1 {
             font-size: 3.5em;
@@ -80,24 +85,30 @@
             display: grid;
             gap: 1.5em;
         }
-        .skills, .experience {
-            display: grid;
-            gap: 1.5em;
-        }
-        .skills li, .experience li {
-            padding: 1.5em;
-            background-color: #e9ecef;
+        .box {
+            background-color: #f1f5f9;
+            padding: 2em;
             border-radius: 8px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            border-left: 5px solid #ffdd57;
         }
-        .skills li {
-            font-weight: bold;
-            text-align: center;
+        .box h3 {
+            font-size: 1.5em;
+            color: #333;
+            margin-bottom: 0.5em;
         }
-        .projects p {
-            font-size: 1.1em;
-            color: #666;
-            text-align: center;
+        .box p {
+            color: #555;
+            line-height: 1.6;
+        }
+        .box ul {
+            margin-top: 1em;
+            padding-left: 1.5em;
+        }
+        .box ul li {
+            margin: 0.8em 0;
+            font-size: 0.95em;
+            color: #333;
         }
         footer {
             text-align: center;
@@ -108,6 +119,11 @@
         footer a {
             color: #ffdd57;
             text-decoration: none;
+        }
+        .stripe {
+            background-color: #ffdd57; /* Yellow color */
+            height: 5px; /* Adjust the thickness of the stripe */
+            width: 100%;
         }
         footer a:hover {
             text-decoration: underline;
@@ -126,6 +142,7 @@
 </head>
 <body>
     <header>
+        <img src="profile.jpg" alt="Muhammad Usman Profile Picture">
         <h1>Muhammad Usman</h1>
         <p>Software Engineer</p>
         <p>Contact: +923225611112 | <a href="mailto:usman.mushtaq8786@gmail.com">usman.mushtaq8786@gmail.com</a></p>
@@ -138,64 +155,68 @@
     <nav>
         <ul>
             <li><a href="#about">About Me</a></li>
-            <li><a href="#experience">Experience</a></li>
             <li><a href="#skills">Skills</a></li>
-            <li><a href="#projects">Projects</a></li>
+            <li><a href="#projects">Highlighted Projects</a></li>
+            <li><a href="#experience">Experience</a></li>
         </ul>
     </nav>
+    <div class="stripe"></div>
     
     <section id="about">
         <div class="container">
             <h2 class="section-title">About Me</h2>
-            <p>A dedicated Software Engineer with a passion for solving complex challenges. I bring a wealth of experience in Python, ERPNext, and backend development, with a strong focus on crafting reliable and efficient solutions. My goal is to contribute to impactful projects, leveraging my skills to drive innovation and operational efficiency.</p>
-        </div>
-    </section>
-    
-    <section id="experience">
-        <div class="container">
-            <h2 class="section-title">Experience</h2>
-            <ul class="experience">
-                <li>
-                    <h3>Software Engineer at Micromerger Pvt. Ltd.</h3>
-                    <span>(Aug 2021 - Present)</span>
-                    <p>Led initiatives for the Sindh government, including the Sindh School Daily Monitoring System (SSDMS) and other government projects, ensuring data transparency and effective project integration.</p>
-                    <p>Collaborated with UNICEF on Safe Space and Child Protection initiatives, utilizing Frappe, Python, and JavaScript to implement custom ERP solutions.</p>
-                    <p>Developed custom ERP systems for prominent clients such as Pakistan State Oil, integrating complex requirements for optimized operations and data management.</p>
-                </li>
-                <li>
-                    <h3>Backend Developer at Asasa.com</h3>
-                    <span>(Mar 2020 - Jul 2021)</span>
-                    <p>Restructured backend systems to enhance scalability and robustness, developed RESTful APIs, and implemented real-time features with MongoDB and Express.js.</p>
-                    <p>Integrated Firebase Cloud Messaging and Socket.io to facilitate seamless push notifications for mobile and web applications.</p>
-                </li>
-            </ul>
+            <div class="box">
+                <p>I am a dedicated Software Engineer with a solid background in Python, ERPNext, and backend development. I specialize in building scalable, reliable systems that enhance operational efficiency. I thrive in problem-solving environments and am passionate about developing software solutions that drive business growth and efficiency.</p>
+            </div>
         </div>
     </section>
     
     <section id="skills">
         <div class="container">
             <h2 class="section-title">Skills</h2>
-            <ul class="skills">
-                <li>Node.js / Nest.js</li>
-                <li>MongoDB / MariaDB</li>
-                <li>RESTful APIs</li>
-                <li>Python / ERPNext / Frappe</li>
-                <li>AWS Services</li>
-                <li>Express.js</li>
-                <li>GitHub</li>
-            </ul>
+            <div class="box">
+                <ul>
+                    <li>Programming Languages: Python, JavaScript (Node.js)</li>
+                    <li>Frameworks: ERPNext, Frappe, Nest.js, Express.js</li>
+                    <li>Database Management: MongoDB, MariaDB</li>
+                    <li>Cloud & API Services: AWS (Lambda, S3), Firebase, RESTful APIs</li>
+                    <li>Other Skills: GitHub, Team Leadership, Version Control, Data Aggregation</li>
+                </ul>
+            </div>
         </div>
     </section>
     
     <section id="projects">
         <div class="container">
-            <h2 class="section-title">Projects</h2>
-            <p>Notable projects include:</p>
-            <ul>
-                <li><strong>Sindh School Daily Monitoring System:</strong> Enhanced data transparency for government projects, allowing for real-time monitoring and analytics.</li>
-                <li><strong>Safe Space and Child Protection Initiatives:</strong> Developed and maintained ERP systems for UNICEF projects focusing on child protection and safe spaces.</li>
-                <li><strong>Custom ERP Solutions:</strong> Engineered ERP solutions for clients like Pakistan State Oil and Hyundai Islamabad, tailoring functionalities to meet business requirements.</li>
-            </ul>
+            <h2 class="section-title">Highlighted Projects</h2>
+            <div class="box">
+                <ul>
+                    <li><strong>Sindh School Daily Monitoring System</strong>: Enhanced data transparency for government officials, providing insights into daily school attendance and resource management.</li>
+                    <li><strong>UNICEF Child Protection Initiatives</strong>: Developed systems to streamline processes for child protection services, improving data accessibility and workflow efficiency.</li>
+                    <li><strong>Custom ERP Solutions</strong>: Built and customized ERP systems for clients like Pakistan State Oil, improving operational efficiency and data management capabilities.</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+    
+    <section id="experience">
+        <div class="container">
+            <h2 class="section-title">Experience</h2>
+            <div class="box">
+                <h3>Software Engineer at Micromerger Pvt. Ltd.</h3>
+                <span>(Aug 2021 - Present)</span>
+                <p>Worked on government and private sector projects, including the Sindh School Daily Monitoring System and UNICEF Child Protection projects. Responsibilities included designing ERP solutions using Frappe and Python, optimizing workflows, and integrating systems for data transparency.</p>
+                <ul>
+                    <li>Led the development of custom ERP systems tailored for client needs.</li>
+                    <li>Developed progress dashboards and custom reports for stakeholders.</li>
+                    <li>Implemented AWS Lambda functions for automation of PDF processing.</li>
+                </ul>
+            </div>
+            <div class="box">
+                <h3>Backend Developer at Asasa.com</h3>
+                <span>(Mar 2020 - Jul 2021)</span>
+                <p>Revamped backend systems to improve performance and scalability. Built RESTful APIs, integrated MongoDB for data storage, and utilized Firebase Cloud Messaging and Socket.io for real-time notifications in web applications.</p>
+            </div>
         </div>
     </section>
     
