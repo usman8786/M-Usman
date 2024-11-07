@@ -4,225 +4,57 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Muhammad Usman's Portfolio</title>
-    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700|Roboto:400,500&display=swap" rel="stylesheet">
-    <style>
-        /* Reset CSS */
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        body {
-            font-family: 'Roboto', sans-serif;
-            color: #333;
-            background-color: #f8f9fa;
-            line-height: 1.6;
-        }
-        header {
-            background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url('header-background.jpg') center/cover no-repeat;
-            color: #fff;
-            padding: 5em 2em;
-            text-align: center;
-        }
-        header img {
-            width: 180px;
-            height: 180px;
-            border-radius: 50%;
-            border: 4px solid #ffdd57;
-            margin-bottom: 1em;
-        }
-        header h1 {
-            font-size: 3.5em;
-            margin-bottom: 0.2em;
-        }
-        header p {
-            font-size: 1.2em;
-        }
-        header a {
-            color: #ddd;
-            text-decoration: none;
-            font-weight: bold;
-            margin: 0 1em;
-            transition: color 0.3s ease;
-        }
-        header a:hover {
-            color: #ffdd57;
-        }
-        nav {
-            display: flex;
-            justify-content: center;
-            background-color: #333;
-            padding: 1em;
-        }
-        nav ul {
-            list-style: none;
-            display: flex;
-            gap: 2em;
-        }
-        nav a {
-            color: #fff;
-            text-decoration: none;
-            font-weight: bold;
-            transition: color 0.3s ease;
-        }
-        nav a:hover {
-            color: #ddd;
-        }
-        section {
-            padding: 4em 2em;
-            background-color: #fff;
-            margin-bottom: 2em;
-        }
-        .section-title {
-            font-size: 2.5em;
-            margin-bottom: 0.5em;
-            text-align: center;
-            color: #333;
-        }
-        .container {
-            max-width: 1200px;
-            margin: auto;
-            display: grid;
-            gap: 1.5em;
-        }
-        .box {
-            background-color: #f1f5f9;
-            padding: 2em;
-            border-radius: 8px;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-            border-left: 5px solid #ffdd57;
-        }
-        .box h3 {
-            font-size: 1.5em;
-            color: #333;
-            margin-bottom: 0.5em;
-        }
-        .box p {
-            color: #555;
-            line-height: 1.6;
-        }
-        .box ul {
-            margin-top: 1em;
-            padding-left: 1.5em;
-        }
-        .box ul li {
-            margin: 0.8em 0;
-            font-size: 0.95em;
-            color: #333;
-        }
-        footer {
-            text-align: center;
-            padding: 2em;
-            background-color: #333;
-            color: #fff;
-        }
-        footer a {
-            color: #ffdd57;
-            text-decoration: none;
-        }
-        .stripe {
-            background-color: #ffdd57; /* Yellow color */
-            height: 5px; /* Adjust the thickness of the stripe */
-            width: 100%;
-        }
-        footer a:hover {
-            text-decoration: underline;
-        }
-        /* Media Query for mobile */
-        @media (max-width: 768px) {
-            .skills, .experience {
-                grid-template-columns: 1fr;
-            }
-            nav ul {
-                flex-direction: column;
-                gap: 1em;
-            }
-        }
-    </style>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header>
-        <img src="profile.jpg" alt="Muhammad Usman Profile Picture">
-        <h1>Muhammad Usman</h1>
-        <p>Software Engineer</p>
-        <p>Contact: +923225611112 | <a href="mailto:usman.mushtaq8786@gmail.com">usman.mushtaq8786@gmail.com</a></p>
-        <p>
-            <a href="https://www.linkedin.com/in/muhammad-usman111">LinkedIn Profile</a> |
-            <a href="https://github.com/usman8786">GitHub Profile</a>
-        </p>
-    </header>
-    
-    <nav>
-        <ul>
-            <li><a href="#about">About Me</a></li>
-            <li><a href="#skills">Skills</a></li>
-            <li><a href="#projects">Highlighted Projects</a></li>
-            <li><a href="#experience">Experience</a></li>
-        </ul>
-    </nav>
-    <div class="stripe"></div>
-    
-    <section id="about">
-        <div class="container">
-            <h2 class="section-title">About Me</h2>
-            <div class="box">
-                <p>I am a dedicated Software Engineer with a solid background in Python, ERPNext, and backend development. I specialize in building scalable, reliable systems that enhance operational efficiency. I thrive in problem-solving environments and am passionate about developing software solutions that drive business growth and efficiency.</p>
+    <div class="container">
+        <nav>
+            <div class="logo">Dev<span>.Usman</span> </div>
+            <!-- <ul class="navItems">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#skills">Skills</a></li>
+            </ul> -->
+            <div class="links">
+                <a href="https://www.linkedin.com/in/muhammad-usman111"><i class="bi bi-linkedin"></i></a>
+                <a href="https://github.com/usman8786"><i class="bi bi-github"></i></a>
+            </div>
+        </nav>
+        <div class="wrapper">
+            <div class="cols cols0">
+                <span class="topLine">Hello</span>
+                <h1>I'm a <span class="multiText">Software Engineer</span></h1>
+                <p>
+                    with a strong background in back-end development, ERP customizations, and API integrations. 
+                    I specialize in crafting scalable systems and have led impactful projects in both government and private sectors, 
+                    including key data transparency initiatives for the Sindh government and UNICEF collaborations. 
+                    My expertise includes Node.js, Python, AWS, and ERPNext, enabling me to deliver efficient, custom solutions for complex business challenges. 
+                    I'm passionate about staying ahead of emerging tech trends and driving growth through technical innovation and strategic problem-solving.
+                </p>
+                <div class="btns">
+                    <a class="button" href="Muhammad Usman(Software Engineer).pdf" target="_blank" download>Download CV</a>
+                    <a class="button" href="tel:+923225611112">Hire Me</a>
+                </div>
+            </div>
+            <div class="cols cols1">
+                <div class="imgbox">
+                    <img src="splash.png" id="splash">
+                    <img src="img.png" alt="Muhammad Usman's Profile Picture" class="profile-picture" id="profile">
+                </div>
             </div>
         </div>
-    </section>
+    </div>
     
-    <section id="skills">
-        <div class="container">
-            <h2 class="section-title">Skills</h2>
-            <div class="box">
-                <ul>
-                    <li>Programming Languages: Python, JavaScript (Node.js)</li>
-                    <li>Frameworks: ERPNext, Frappe, Nest.js, Express.js</li>
-                    <li>Database Management: MongoDB, MariaDB</li>
-                    <li>Cloud & API Services: AWS (Lambda, S3), Firebase, RESTful APIs</li>
-                    <li>Other Skills: GitHub, Team Leadership, Version Control, Data Aggregation</li>
-                </ul>
-            </div>
-        </div>
-    </section>
-    
-    <section id="projects">
-        <div class="container">
-            <h2 class="section-title">Highlighted Projects</h2>
-            <div class="box">
-                <ul>
-                    <li><strong>Sindh School Daily Monitoring System</strong>: Enhanced data transparency for government officials, providing insights into daily school attendance and resource management.</li>
-                    <li><strong>UNICEF Child Protection Initiatives</strong>: Developed systems to streamline processes for child protection services, improving data accessibility and workflow efficiency.</li>
-                    <li><strong>Custom ERP Solutions</strong>: Built and customized ERP systems for clients like Pakistan State Oil, improving operational efficiency and data management capabilities.</li>
-                </ul>
-            </div>
-        </div>
-    </section>
-    
-    <section id="experience">
-        <div class="container">
-            <h2 class="section-title">Experience</h2>
-            <div class="box">
-                <h3>Software Engineer at Micromerger Pvt. Ltd.</h3>
-                <span>(Aug 2021 - Present)</span>
-                <p>Worked on government and private sector projects, including the Sindh School Daily Monitoring System and UNICEF Child Protection projects. Responsibilities included designing ERP solutions using Frappe and Python, optimizing workflows, and integrating systems for data transparency.</p>
-                <ul>
-                    <li>Led the development of custom ERP systems tailored for client needs.</li>
-                    <li>Developed progress dashboards and custom reports for stakeholders.</li>
-                    <li>Implemented AWS Lambda functions for automation of PDF processing.</li>
-                </ul>
-            </div>
-            <div class="box">
-                <h3>Backend Developer at Asasa.com</h3>
-                <span>(Mar 2020 - Jul 2021)</span>
-                <p>Revamped backend systems to improve performance and scalability. Built RESTful APIs, integrated MongoDB for data storage, and utilized Firebase Cloud Messaging and Socket.io for real-time notifications in web applications.</p>
-            </div>
-        </div>
-    </section>
-    
-    <footer>
-        <p>&copy; 2024 Muhammad Usman</p>
-        <p><a href="https://github.com/usman8786">GitHub Profile</a></p>
-    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+    <script>
+        var typingEffect = new Typed(".multiText", {   
+            strings : ["Software Engineer", "Backend Developer", "Frappe Developer", "ERPNext Developer"],
+            loop : true,
+            typeSpeed : 100,
+            backSpeed : 80,
+            backDelay : 1500
+        });
+    </script>
 </body>
 </html>
