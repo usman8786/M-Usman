@@ -22,15 +22,20 @@
         line-height: 1.6;
       }
       header {
-        background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)),
+        background: linear-gradient(
+            rgba(0, 0, 0, 0.8),
+            rgba(0, 0, 0, 0.8)
+          ),
           url("header-background.jpg") center/cover no-repeat;
         color: #fff;
         padding: 5em 2em;
         text-align: center;
+        position: relative;
       }
       header h1 {
         font-size: 3.5em;
         margin-bottom: 0.2em;
+        font-family: "Montserrat", sans-serif;
       }
 
       header p {
@@ -39,18 +44,19 @@
       }
 
       header .role {
-        font-size: 1.5em; /* Make this slightly larger */
-        color: #ffdd57; /* Accent color to stand out */
+        font-size: 1.5em;
+        color: #ffdd57;
         margin-bottom: 1em;
-        font-weight: bold; /* Bold for emphasis */
+        font-weight: bold;
       }
 
       header img {
         width: 180px;
         height: 180px;
         border-radius: 50%;
-        border: 4px solid #ffdd57;
+        border: 5px solid #ffdd57;
         margin-bottom: 1em;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
       }
       header a {
         color: #ddd;
@@ -67,6 +73,9 @@
         justify-content: center;
         background-color: #333;
         padding: 1em;
+        position: sticky;
+        top: 0;
+        z-index: 1000;
       }
       nav ul {
         list-style: none;
@@ -80,49 +89,51 @@
         transition: color 0.3s ease;
       }
       nav a:hover {
-        color: #ddd;
+        color: #ffdd57;
       }
       section {
         padding: 4em 2em;
         background-color: #fff;
         margin-bottom: 2em;
+        text-align: center;
       }
       .section-title {
         font-size: 2.5em;
-        margin-bottom: 0.5em;
-        text-align: center;
+        margin-bottom: 1em;
         color: #333;
+        font-family: "Montserrat", sans-serif;
       }
       .container {
-        max-width: 1200px;
+        max-width: 1100px;
         margin: auto;
         display: grid;
-        gap: 1.5em;
+        gap: 2em;
       }
       .box {
         background-color: #f1f5f9;
         padding: 2em;
-        border-radius: 8px;
-        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-        border-left: 5px solid #ffdd57;
+        border-radius: 12px;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+      }
+      .box:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 6px 18px rgba(0, 0, 0, 0.2);
       }
       .box h3 {
         font-size: 1.5em;
         color: #333;
         margin-bottom: 0.5em;
       }
-      .box p {
+      .box p,
+      .box ul li {
         color: #555;
         line-height: 1.6;
       }
       .box ul {
         margin-top: 1em;
         padding-left: 1.5em;
-      }
-      .box ul li {
-        margin: 0.8em 0;
-        font-size: 0.95em;
-        color: #333;
+        list-style-type: square;
       }
       footer {
         text-align: center;
@@ -134,23 +145,24 @@
         color: #ffdd57;
         text-decoration: none;
       }
-      .stripe {
-        background-color: #ffdd57; /* Yellow color */
-        height: 5px; /* Adjust the thickness of the stripe */
-        width: 100%;
-      }
       footer a:hover {
         text-decoration: underline;
       }
-      /* Media Query for mobile */
+      .stripe {
+        background-color: #ffdd57;
+        height: 5px;
+        width: 100%;
+      }
       @media (max-width: 768px) {
-        .skills,
-        .experience {
-          grid-template-columns: 1fr;
-        }
         nav ul {
           flex-direction: column;
           gap: 1em;
+        }
+        header h1 {
+          font-size: 2.5em;
+        }
+        .container {
+          grid-template-columns: 1fr;
         }
       }
     </style>
@@ -160,7 +172,6 @@
       <img src="profile.jpg" alt="Muhammad Usman Profile Picture" />
       <h1>Muhammad Usman</h1>
       <p class="role">Software Engineer</p>
-      <!-- Add class="role" here -->
       <p>
         Contact: +923225611112 |
         <a href="mailto:usman.mushtaq8786@gmail.com"
@@ -193,10 +204,7 @@
           <p>
             I am a dedicated Software Engineer with a solid background in
             Python, ERPNext, and backend development. I specialize in building
-            scalable, reliable systems that enhance operational efficiency. I
-            thrive in problem-solving environments and am passionate about
-            developing software solutions that drive business growth and
-            efficiency.
+            scalable, reliable systems that enhance operational efficiency.
           </p>
         </div>
       </div>
@@ -213,10 +221,6 @@
             <li>
               Cloud & API Services: AWS (Lambda, S3), Firebase, RESTful APIs
             </li>
-            <li>
-              Other Skills: GitHub, Team Leadership, Version Control, Data
-              Aggregation
-            </li>
           </ul>
         </div>
       </div>
@@ -232,16 +236,6 @@
               data transparency for government officials, providing insights
               into daily school attendance and resource management.
             </li>
-            <li>
-              <strong>UNICEF Child Protection Initiatives</strong>: Developed
-              systems to streamline processes for child protection services,
-              improving data accessibility and workflow efficiency.
-            </li>
-            <li>
-              <strong>Custom ERP Solutions</strong>: Built and customized ERP
-              systems for clients like Pakistan State Oil, improving operational
-              efficiency and data management capabilities.
-            </li>
           </ul>
         </div>
       </div>
@@ -256,31 +250,7 @@
           <p>
             Worked on government and private sector projects, including the
             Sindh School Daily Monitoring System and UNICEF Child Protection
-            projects. Responsibilities included designing ERP solutions using
-            Frappe and Python, optimizing workflows, and integrating systems for
-            data transparency.
-          </p>
-          <ul>
-            <li>
-              Led the development of custom ERP systems tailored for client
-              needs.
-            </li>
-            <li>
-              Developed progress dashboards and custom reports for stakeholders.
-            </li>
-            <li>
-              Implemented AWS Lambda functions for automation of PDF processing.
-            </li>
-          </ul>
-        </div>
-        <div class="box">
-          <h3>Backend Developer at Asasa.com</h3>
-          <span>(Mar 2020 - Jul 2021)</span>
-          <p>
-            Revamped backend systems to improve performance and scalability.
-            Built RESTful APIs, integrated MongoDB for data storage, and
-            utilized Firebase Cloud Messaging and Socket.io for real-time
-            notifications in web applications.
+            projects.
           </p>
         </div>
       </div>
