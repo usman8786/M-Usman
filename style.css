@@ -1,25 +1,23 @@
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700;800&family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
-/* font-family: 'Poppins', sans-serif; */
-*{
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
 }
-/* .color-original{
-    background-color: #000;
-    background-color: #7f00ff;
-} */
-body{
-    /* overflow: hidden; */
+
+body {
     height: 100vh;
 }
-.container{
+
+.container {
     width: 100%;
     min-height: 100vh;
     background-color: #f6f9fd;
 }
-nav{
+
+nav {
     display: flex;
     width: 100%;
     justify-content: space-around;
@@ -27,54 +25,35 @@ nav{
     line-height: 80px;
     z-index: 111;
 }
-.logo{
-    display: flex;
+
+.logo {
     font-size: 35px;
     font-weight: 800;
     color: #000;
     letter-spacing: 3px;
     cursor: pointer;
-    /* text-transform: uppercase; */
 }
-.logo span{
-    /* font-size: 70px; */
-    /* color: #7f00ff; */
+
+.logo span {
     color: #ffba00;
 }
-.navItems{
-    display: flex;
-}
-.navItems li{
-    list-style: none;
-    margin: 0 15px;
-}
-.navItems li a{
-    font-size: 20px;
-    color: #000;
-    letter-spacing: 3px;
-    text-decoration: none;
-    text-transform: capitalize;
-}
-.navItems li:hover a,
-.links a:hover{
-    /* color: #7f00ff ; */
-    color: #ffba00 ;
-}
-.links a{
+
+.links a {
     font-size: 25px;
     color: #000;
     margin: 25px 10px;
 }
-.wrapper{
+
+.wrapper {
     display: flex;
     width: 100%;
     height: calc(100vh - 80px);
     justify-content: center;
     align-items: center;
     padding: 0 10%;
-    overflow: hidden;
 }
-.wrapper::before{
+
+.wrapper::before {
     position: absolute;
     content: '';
     height: 350px;
@@ -82,92 +61,50 @@ nav{
     border-radius: 50%;
     left: -12%;
     top: 40%;
-    /* background: linear-gradient(45deg, #7f00ff,pink); */
-    background: linear-gradient(45deg, #ffba00,pink);
+    background: linear-gradient(45deg, #ffba00, pink);
     animation: object1 6s linear infinite;
-}
-.wrapper::after{
-    position: absolute;
-    content: '';
-    height: 100px;
-    width: 100px;
-    border-radius: 50%;
-    left: 35%;
-    top: 12%;
-    /* background: linear-gradient(45deg, #7f00ff,pink); */
-    background: linear-gradient(45deg, #ffba00,pink);
-    animation: object2 6s linear infinite;
 }
 
 @keyframes object1 {
-    50%{
+    50% {
         left: -13%;
-        top: 31%;;
-    }  
+        top: 31%;
+    }
 }
 
-@keyframes object2 {
-    50%{
-        left: 35%;
-        top: 10%;;
-    }  
-}
-
-
-.cols{
+.cols {
     width: 50%;
 }
 
-.cols0{
-    z-index: 5;
-}
-.cols1{
-    padding-left: 100px;
-}
-.topLine{
-    display: block;
-    position: relative;
+.topLine {
     font-size: 40px;
     letter-spacing: 5px;
     color: #000;
 }
-.topLine::after{
-    position:absolute;
-    content: '';
-    height: 4px;
-    width: 50px;
-    bottom: 10px;
-    /* background-color: #7f00ff; */
-    background-color: #ffba00;
-}
-h1{
-    display: block;
+
+h1 {
     font-size: 3em;
     font-weight: 900;
     color: #000;
 }
-.multiText{
-    /* color:#7f00ff; */
-    color:#ffba00;
+
+.multiText {
+    color: #ffba00;
     text-transform: capitalize;
 }
-p{
-    display:block;
+
+p {
     width: 90%;
     font-size: 1.2em;
     color: #000;
 }
-.btns{
-    width: 100%;
-    position: relative;
+
+.btns {
     left: 150px;
     margin-top: 2em;
 }
-.button{
-    
-    outline: none;
-    border: none;
-    cursor: pointer;
+
+.button {
     font-size: 25px;
     font-weight: 400;
     color: #fff;
@@ -175,51 +112,35 @@ p{
     padding: 8px 14px;
     margin: 40px 5px;
     letter-spacing: 2px;
-    text-transform: capitalize;
-    box-shadow: 0 15px 10px rgba(0, 0, 0, 0.4);
     text-decoration: none;
 }
 
-.button:hover{
-    /* background-color: #7f00ff; */
+.button:hover {
     background-color: #ffba00;
 }
-/* .imgbox{
-    position: relative;
-    width: 100%;
-    height: 100%;
-}
-.imgbox img{
-    position: relative;
-    height: 100%;
-    width: calc(130% - 80px);
-    top: 150px;
-    right: 50px;
-    animation: animateUser 4s linear infinite;
-} */
+
 .imgbox {
     position: relative;
-    width: 90%; /* Change width to 50% */
-    height: auto; /* Change height to auto */
+    width: 90%;
+    height: auto;
 }
 
 .imgbox img {
-    position: relative;
-    height: auto; /* Change height to auto */
-    width: 100%; /* Set width to 100% */
+    height: auto;
+    width: 100%;
     top: 50px;
     right: 50px;
     animation: animateUser 4s linear infinite;
 }
 
 @keyframes animateUser {
-    50%{
+    50% {
         right: 30px;
         top: 40px;
-    } 
+    }
 }
 
-.imgbox #splash{
+.imgbox #splash {
     position: absolute;
     top: 50%;
     left: 50%;
@@ -229,107 +150,38 @@ p{
     animation: animate 4s linear infinite;
 }
 
-.imgbox #profile{
-    position: relative;
-    height: 208%;
-    width: 133%;
-    top: 50px;
-    right: 50px;
-    animation: animateUser 4s linear infinite;
-}
-
-@keyframes animate {
-    50%{
-        top: 49%;
-        left: 51%;
-        width: 155%;
-    }
-}
-
 @media screen and (max-width: 768px) {
-    .navItems {
-      display: none;
-      margin-bottom: 10px;;
-    }
-    .links{
+    .navItems, .links {
         display: none;
     }
-  
+
     .logo {
-      font-size: 25px;
+        font-size: 25px;
     }
-  
-    .links a {
-      font-size: 20px;
-      margin: 15px 5px;
-    }
-    
-    .wrapper{
-        display: flex;
+
+    .wrapper {
         flex-direction: column;
         height: auto;
     }
-     .wrapper::after{
+
+    .wrapper::after {
         display: none;
     }
-     .wrapper::before{
-        position: absolute;
-        content: '';
-        height: 400px;
-        width: 400px;
-        border-radius: 50%;
-        left: -24%;
-        top: 50%;
-    }
+
     .cols {
-      width: 100%;
-      height: auto;
+        width: 100%;
     }
-  
-    .cols0,
-    .cols1 {
-      padding-left: 0;
 
-    }
-  
     .topLine {
-      font-size: 30px;
-      margin-bottom: 0.5em;
+        font-size: 30px;
     }
-  
+
     h1 {
-      font-size: 2em;
-      margin-bottom: 0.5em;
-
+        font-size: 2em;
     }
-  
+
     p {
-      width: 100%;
-      font-size: 1em;
-      margin-bottom: 2em;
-
+        width: 100%;
+        font-size: 1em;
     }
-  
-    .btns {
-      left: 0;
-      margin-top: 1em;
-      margin-bottom: 2em;
-    }
-  
-    .button {
-      font-size: 20px;
-      padding: 6px 10px;
-      margin: 20px 5px;
-    }
-  
-    .imgbox img {
-      width: 100%;
-      top: 0;
-      right: 0;
-    }
-  
-    .imgbox #splash {
-        display: none;
-    }
-  }
-  
+}
