@@ -4,49 +4,175 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Muhammad Usman's Portfolio</title>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700|Roboto:400,500&display=swap" rel="stylesheet">
+    <!-- CSS Reset and Custom Styles -->
     <style>
-        body { font-family: Arial, sans-serif; margin: 0; padding: 0; color: #333; }
-        header { background-color: #0e76a8; color: #fff; padding: 2em; text-align: center; }
-        header h1 { margin: 0; }
-        header p { font-size: 1.2em; }
-        section { padding: 2em; }
-        .section-title { font-size: 24px; margin-top: 0; }
-        .container { max-width: 800px; margin: 0 auto; }
-        footer { text-align: center; padding: 1em; background-color: #f1f1f1; }
-        .skills, .experience { list-style-type: none; padding: 0; }
-        .skills li, .experience li { margin-bottom: 0.5em; }
+        /* Reset CSS */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Roboto', sans-serif;
+            color: #333;
+            background-color: #f8f9fa;
+            line-height: 1.6;
+        }
+        header {
+            background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url('header-background.jpg') center/cover no-repeat;
+            color: #fff;
+            padding: 5em 2em;
+            text-align: center;
+        }
+        header h1 {
+            font-size: 3.5em;
+            margin-bottom: 0.2em;
+        }
+        header p {
+            font-size: 1.2em;
+        }
+        header a {
+            color: #ddd;
+            text-decoration: none;
+            font-weight: bold;
+            margin: 0 1em;
+            transition: color 0.3s ease;
+        }
+        header a:hover {
+            color: #ffdd57;
+        }
+        nav {
+            display: flex;
+            justify-content: center;
+            background-color: #333;
+            padding: 1em;
+        }
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 2em;
+        }
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: bold;
+            transition: color 0.3s ease;
+        }
+        nav a:hover {
+            color: #ddd;
+        }
+        section {
+            padding: 4em 2em;
+            background-color: #fff;
+            margin-bottom: 2em;
+        }
+        .section-title {
+            font-size: 2.5em;
+            margin-bottom: 0.5em;
+            text-align: center;
+            color: #333;
+        }
+        .container {
+            max-width: 1200px;
+            margin: auto;
+            display: grid;
+            gap: 1.5em;
+        }
+        .skills, .experience {
+            display: grid;
+            gap: 1.5em;
+        }
+        .skills li, .experience li {
+            padding: 1.5em;
+            background-color: #e9ecef;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        .skills li {
+            font-weight: bold;
+            text-align: center;
+        }
+        .projects p {
+            font-size: 1.1em;
+            color: #666;
+            text-align: center;
+        }
+        footer {
+            text-align: center;
+            padding: 2em;
+            background-color: #333;
+            color: #fff;
+        }
+        footer a {
+            color: #ffdd57;
+            text-decoration: none;
+        }
+        footer a:hover {
+            text-decoration: underline;
+        }
+        /* Media Query for mobile */
+        @media (max-width: 768px) {
+            .skills, .experience {
+                grid-template-columns: 1fr;
+            }
+            nav ul {
+                flex-direction: column;
+                gap: 1em;
+            }
+        }
     </style>
 </head>
 <body>
     <header>
         <h1>Muhammad Usman</h1>
         <p>Software Engineer</p>
-        <p>Contact: +923225611112 | <a href="mailto:usman.mushtaq8786@gmail.com" style="color: #fff; text-decoration: underline;">usman.mushtaq8786@gmail.com</a></p>
-        <p><a href="https://www.linkedin.com/in/muhammad-usman111" style="color: #fff; text-decoration: underline;">LinkedIn Profile</a></p>
+        <p>Contact: +923225611112 | <a href="mailto:usman.mushtaq8786@gmail.com">usman.mushtaq8786@gmail.com</a></p>
+        <p>
+            <a href="https://www.linkedin.com/in/muhammad-usman111">LinkedIn Profile</a> |
+            <a href="https://github.com/usman8786">GitHub Profile</a>
+        </p>
     </header>
-
-    <section>
+    
+    <nav>
+        <ul>
+            <li><a href="#about">About Me</a></li>
+            <li><a href="#experience">Experience</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#projects">Projects</a></li>
+        </ul>
+    </nav>
+    
+    <section id="about">
         <div class="container">
             <h2 class="section-title">About Me</h2>
-            <p>Hardworking and technically proficient engineer who thrives when facing challenges and tackling complex problems. Experienced in Python, ERPNext, and backend development, with a focus on creating innovative solutions for complex systems.</p>
+            <p>A dedicated Software Engineer with a passion for solving complex challenges. I bring a wealth of experience in Python, ERPNext, and backend development, with a strong focus on crafting reliable and efficient solutions. My goal is to contribute to impactful projects, leveraging my skills to drive innovation and operational efficiency.</p>
         </div>
     </section>
-
-    <section>
+    
+    <section id="experience">
         <div class="container">
             <h2 class="section-title">Experience</h2>
             <ul class="experience">
-                <li><strong>Software Engineer</strong> at Micromerger Pvt. Ltd. (Aug 2021 - Present)
-                    <p>Developed ERP systems, integrated UNICEF projects, and customized Frappe frameworks for government projects in Sindh.</p>
+                <li>
+                    <h3>Software Engineer at Micromerger Pvt. Ltd.</h3>
+                    <span>(Aug 2021 - Present)</span>
+                    <p>Led initiatives for the Sindh government, including the Sindh School Daily Monitoring System (SSDMS) and other government projects, ensuring data transparency and effective project integration.</p>
+                    <p>Collaborated with UNICEF on Safe Space and Child Protection initiatives, utilizing Frappe, Python, and JavaScript to implement custom ERP solutions.</p>
+                    <p>Developed custom ERP systems for prominent clients such as Pakistan State Oil, integrating complex requirements for optimized operations and data management.</p>
                 </li>
-                <li><strong>Backend Developer</strong> at Asasa.com (Mar 2020 - Jul 2021)
-                    <p>Restructured the backend for Asasa.com, built scalable RESTful APIs, and implemented MongoDB architecture.</p>
+                <li>
+                    <h3>Backend Developer at Asasa.com</h3>
+                    <span>(Mar 2020 - Jul 2021)</span>
+                    <p>Restructured backend systems to enhance scalability and robustness, developed RESTful APIs, and implemented real-time features with MongoDB and Express.js.</p>
+                    <p>Integrated Firebase Cloud Messaging and Socket.io to facilitate seamless push notifications for mobile and web applications.</p>
                 </li>
             </ul>
         </div>
     </section>
-
-    <section>
+    
+    <section id="skills">
         <div class="container">
             <h2 class="section-title">Skills</h2>
             <ul class="skills">
@@ -60,16 +186,22 @@
             </ul>
         </div>
     </section>
-
-    <section>
+    
+    <section id="projects">
         <div class="container">
             <h2 class="section-title">Projects</h2>
-            <p>Some notable projects include the Sindh School Daily Monitoring System, Safe Space and Child Protection initiatives, and data transparency integrations for government departments.</p>
+            <p>Notable projects include:</p>
+            <ul>
+                <li><strong>Sindh School Daily Monitoring System:</strong> Enhanced data transparency for government projects, allowing for real-time monitoring and analytics.</li>
+                <li><strong>Safe Space and Child Protection Initiatives:</strong> Developed and maintained ERP systems for UNICEF projects focusing on child protection and safe spaces.</li>
+                <li><strong>Custom ERP Solutions:</strong> Engineered ERP solutions for clients like Pakistan State Oil and Hyundai Islamabad, tailoring functionalities to meet business requirements.</li>
+            </ul>
         </div>
     </section>
-
+    
     <footer>
         <p>&copy; 2024 Muhammad Usman</p>
+        <p><a href="https://github.com/usman8786">GitHub Profile</a></p>
     </footer>
 </body>
 </html>
