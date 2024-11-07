@@ -8,6 +8,14 @@
       href="https://fonts.googleapis.com/css?family=Montserrat:400,700|Roboto:400,500&display=swap"
       rel="stylesheet"
     />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+      integrity="sha384-BxC6ChntpGgKmKrpx92OH0XLFH/pH7vY4sDrpSC8xyhzfIKxiX4vTLQyCyCqD6gd"
+      crossorigin="anonymous"
+    />
     <style>
       /* Reset CSS */
       * {
@@ -37,19 +45,16 @@
         margin-bottom: 0.2em;
         font-family: "Montserrat", sans-serif;
       }
-
       header p {
         font-size: 1.2em;
         margin-bottom: 0.5em;
       }
-
       header .role {
         font-size: 1.5em;
         color: #ffdd57;
         margin-bottom: 1em;
         font-weight: bold;
       }
-
       header img {
         width: 180px;
         height: 180px;
@@ -68,47 +73,45 @@
       header a:hover {
         color: #ffdd57;
       }
-      nav {
-        display: flex;
-        justify-content: center;
-        background-color: #333;
-        padding: 1em;
-        position: sticky;
-        top: 0;
-        z-index: 1000;
-      }
-      nav ul {
-        list-style: none;
-        display: flex;
-        gap: 2em;
-      }
-      nav a {
-        color: #fff;
-        text-decoration: none;
+
+      /* Button styling */
+      .button {
+        display: inline-block;
+        padding: 0.8em 2em;
+        margin-top: 1em;
+        font-size: 1.2em;
         font-weight: bold;
-        transition: color 0.3s ease;
+        color: #333;
+        background-color: #ffdd57;
+        border-radius: 5px;
+        text-decoration: none;
+        transition: background-color 0.3s ease, color 0.3s ease;
       }
-      nav a:hover {
-        color: #ffdd57;
+      .button:hover {
+        background-color: #ffd633;
+        color: #000;
       }
-      section {
+
+      .content {
         padding: 4em 2em;
         background-color: #fff;
-        margin-bottom: 2em;
+      }
+
+      .container {
+        max-width: 1100px;
+        margin: auto;
+        display: grid;
+        gap: 2em;
         text-align: center;
       }
+
       .section-title {
         font-size: 2.5em;
         margin-bottom: 1em;
         color: #333;
         font-family: "Montserrat", sans-serif;
       }
-      .container {
-        max-width: 1100px;
-        margin: auto;
-        display: grid;
-        gap: 2em;
-      }
+
       .box {
         background-color: #f1f5f9;
         padding: 2em;
@@ -144,26 +147,14 @@
       footer a {
         color: #ffdd57;
         text-decoration: none;
+        font-size: 1.1em;
+        margin: 0 1em;
       }
       footer a:hover {
         text-decoration: underline;
       }
-      .stripe {
-        background-color: #ffdd57;
-        height: 5px;
-        width: 100%;
-      }
-      @media (max-width: 768px) {
-        nav ul {
-          flex-direction: column;
-          gap: 1em;
-        }
-        header h1 {
-          font-size: 2.5em;
-        }
-        .container {
-          grid-template-columns: 1fr;
-        }
+      .contact-icons i {
+        margin-right: 0.5em;
       }
     </style>
   </head>
@@ -173,92 +164,87 @@
       <h1>Muhammad Usman</h1>
       <p class="role">Software Engineer</p>
       <p>
-        Contact: +923225611112 |
-        <a href="mailto:usman.mushtaq8786@gmail.com"
-          >usman.mushtaq8786@gmail.com</a
-        >
+        <a href="mailto:usman.mushtaq8786@gmail.com" class="contact-icons">
+          <i class="bi bi-envelope"></i> usman.mushtaq8786@gmail.com
+        </a>
       </p>
       <p>
-        <a href="https://www.linkedin.com/in/muhammad-usman111"
-          >LinkedIn Profile</a
-        >
+        <a href="https://www.linkedin.com/in/muhammad-usman111" class="contact-icons">
+          <i class="bi bi-linkedin"></i> LinkedIn Profile
+        </a>
         |
-        <a href="https://github.com/usman8786">GitHub Profile</a>
+        <a href="https://github.com/usman8786" class="contact-icons">
+          <i class="bi bi-github"></i> GitHub Profile
+        </a>
       </p>
+      <a class="button" href="tel:+923225611112"><i class="bi bi-telephone"></i> Contact </a>
     </header>
 
-    <nav>
-      <ul>
-        <li><a href="#about">About Me</a></li>
-        <li><a href="#skills">Skills</a></li>
-        <li><a href="#projects">Highlighted Projects</a></li>
-        <li><a href="#experience">Experience</a></li>
-      </ul>
-    </nav>
-    <div class="stripe"></div>
-
-    <section id="about">
+    <div class="content">
       <div class="container">
         <h2 class="section-title">About Me</h2>
         <div class="box">
           <p>
-            I am a dedicated Software Engineer with a solid background in
-            Python, ERPNext, and backend development. I specialize in building
-            scalable, reliable systems that enhance operational efficiency.
+            Hardworking and technically proficient Engineer who thrives when facing challenges and tackling complex problems. Works well with business leaders to understand business issues and define system requirements. Looking for a challenging role in a reputable organization to utilize my technical, database, and management skills for the growth of the organization as well as to enhance my knowledge about new and emerging trends in the IT sector.
           </p>
         </div>
-      </div>
-    </section>
 
-    <section id="skills">
-      <div class="container">
         <h2 class="section-title">Skills</h2>
         <div class="box">
           <ul>
-            <li>Programming Languages: Python, JavaScript (Node.js)</li>
-            <li>Frameworks: ERPNext, Frappe, Nest.js, Express.js</li>
+            <li>Programming Languages: Python, JavaScript (Node.js), Nest.js</li>
+            <li>Frameworks: ERPNext, Frappe, Express.js</li>
             <li>Database Management: MongoDB, MariaDB</li>
-            <li>
-              Cloud & API Services: AWS (Lambda, S3), Firebase, RESTful APIs
-            </li>
+            <li>Cloud & API Services: AWS (Lambda, S3, EC2), Firebase</li>
+            <li>Web Services: RESTful APIs</li>
+            <li>Version Control: GitHub</li>
           </ul>
         </div>
-      </div>
-    </section>
 
-    <section id="projects">
-      <div class="container">
         <h2 class="section-title">Highlighted Projects</h2>
         <div class="box">
           <ul>
             <li>
-              <strong>Sindh School Daily Monitoring System</strong>: Enhanced
-              data transparency for government officials, providing insights
-              into daily school attendance and resource management.
+              <strong>Sindh School Daily Monitoring System (SSDMS)</strong>: Spearheaded for the Sindh government, enhancing data transparency and providing insights into daily school attendance and resource management.
+            </li>
+            <li>
+              <strong>UNICEF Child Protection Initiatives</strong>: Developed systems to streamline processes for child protection services, improving data accessibility and workflow efficiency.
+            </li>
+            <li>
+              <strong>Custom ERP Solutions</strong>: Built and customized ERP systems for clients like Pakistan State Oil and Hyundai Islamabad, improving operational efficiency and data management capabilities.
+            </li>
+            <li>
+              <strong>Falaya.com</strong>: Worked as a back-end developer, implementing AWS Lambda functions for PDF processing automation and creating APIs.
             </li>
           </ul>
         </div>
-      </div>
-    </section>
 
-    <section id="experience">
-      <div class="container">
         <h2 class="section-title">Experience</h2>
         <div class="box">
           <h3>Software Engineer at Micromerger Pvt. Ltd.</h3>
           <span>(Aug 2021 - Present)</span>
           <p>
-            Worked on government and private sector projects, including the
-            Sindh School Daily Monitoring System and UNICEF Child Protection
-            projects.
+            Spearheaded projects for the Sindh government, including SSDMS, SELD, and DGME. Collaborated on UNICEF initiatives, utilizing Frappe, Python, and JavaScript. Played a pivotal role in constructing ERP systems for clients like Pakistan State Oil, tailored to unique business needs. Integrated multiple government projects to enhance data transparency.
+          </p>
+          <ul>
+            <li>Customized the Frappe Framework design for projects using an app-based approach.</li>
+            <li>Integrated push notifications and SMS services like Twilio and InfoBip for enhanced user engagement.</li>
+            <li>Developed Python scripts for generating tailored reports to streamline data analysis.</li>
+          </ul>
+        </div>
+        <div class="box">
+          <h3>Backend Developer at Asasa.com</h3>
+          <span>(Mar 2020 - Jul 2021)</span>
+          <p>
+            Part of the team that restructured the back-end for scalability and robustness, developed RESTful APIs using Node.js, and worked on MongoDB schema design for data management. Implemented Firebase Cloud Messaging and Socket.io for real-time notifications.
           </p>
         </div>
       </div>
-    </section>
+    </div>
 
     <footer>
       <p>&copy; 2024 Muhammad Usman</p>
-      <p><a href="https://github.com/usman8786">GitHub Profile</a></p>
+      <p><a href="https://github.com/usman8786"><i class="bi bi-github"></i> GitHub Profile</a></p>
     </footer>
   </body>
 </html>
