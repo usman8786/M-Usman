@@ -8,7 +8,10 @@
       href="https://fonts.googleapis.com/css?family=Montserrat:400,700|Roboto:400,500&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css"
+    />
 
     <link
       rel="stylesheet"
@@ -30,10 +33,7 @@
         line-height: 1.6;
       }
       header {
-        background: linear-gradient(
-            rgba(0, 0, 0, 0.8),
-            rgba(0, 0, 0, 0.8)
-          ),
+        background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)),
           url("header-background.jpg") center/cover no-repeat;
         color: #fff;
         padding: 5em 2em;
@@ -44,6 +44,7 @@
         font-size: 3.5em;
         margin-bottom: 0.2em;
         font-family: "Montserrat", sans-serif;
+        white-space: nowrap; /* Prevents line break */
       }
       header p {
         font-size: 1.2em;
@@ -157,10 +158,24 @@
         margin-right: 0.5em;
       }
       .stripe {
-            background-color: #ffdd57; /* Yellow color */
-            height: 5px; /* Adjust the thickness of the stripe */
-            width: 100%;
+        background-color: #ffdd57;
+        height: 5px;
+        width: 100%;
+      }
+
+      /* Mobile view adjustments */
+      @media (max-width: 768px) {
+        header h1 {
+          font-size: 1.8em; /* Smaller font size for mobile */
         }
+        header img {
+          width: 160px; /* Adjust image size for mobile */
+          height: 160px;
+        }
+        header .email {
+          font-size: 0.9em; /* Smaller email font size for mobile */
+        }
+      }
     </style>
   </head>
   <body>
@@ -168,13 +183,16 @@
       <img src="profile.jpg" alt="Muhammad Usman Profile Picture" />
       <h1>Muhammad Usman</h1>
       <p class="role">Software Engineer</p>
-      <p>
+      <p class="email">
         <a href="mailto:usman.mushtaq8786@gmail.com" class="contact-icons">
           <i class="bi bi-envelope"></i> usman.mushtaq8786@gmail.com
         </a>
       </p>
       <p>
-        <a href="https://www.linkedin.com/in/muhammad-usman111" class="contact-icons">
+        <a
+          href="https://www.linkedin.com/in/muhammad-usman111"
+          class="contact-icons"
+        >
           <i class="bi bi-linkedin"></i> LinkedIn
         </a>
         |
@@ -183,30 +201,42 @@
         </a>
       </p>
       <!-- Download CV Button -->
-      <a class="button" href="Muhammad Usman(Software Engineer).pdf" download="Muhammad Usman CV.pdf">
+      <a
+        class="button"
+        href="Muhammad Usman(Software Engineer).pdf"
+        download="Muhammad Usman CV.pdf"
+      >
         <i class="bi bi-download"></i> Download CV
       </a>
-      
+
       <!-- Contact Button -->
       <a class="button" href="tel:+923225611112">
         <i class="bi bi-telephone"></i> Contact
       </a>
     </header>
-    
+
     <div class="stripe"></div>
     <div class="content">
       <div class="container">
         <h2 class="section-title">About Me</h2>
         <div class="box">
           <p>
-            Hardworking and technically proficient Engineer who thrives when facing challenges and tackling complex problems. Works well with business leaders to understand business issues and define system requirements. Looking for a challenging role in a reputable organization to utilize my technical, database, and management skills for the growth of the organization as well as to enhance my knowledge about new and emerging trends in the IT sector.
+            Hardworking and technically proficient Engineer who thrives when
+            facing challenges and tackling complex problems. Works well with
+            business leaders to understand business issues and define system
+            requirements. Looking for a challenging role in a reputable
+            organization to utilize my technical, database, and management
+            skills for the growth of the organization as well as to enhance my
+            knowledge about new and emerging trends in the IT sector.
           </p>
         </div>
 
         <h2 class="section-title">Skills</h2>
         <div class="box">
           <ul>
-            <li>Programming Languages: Python, JavaScript (Node.js), Nest.js</li>
+            <li>
+              Programming Languages: Python, JavaScript (Node.js), Nest.js
+            </li>
             <li>Frameworks: ERPNext, Frappe, Express.js</li>
             <li>Database Management: MongoDB, MariaDB</li>
             <li>Cloud & API Services: AWS (Lambda, S3, EC2), Firebase</li>
@@ -219,16 +249,25 @@
         <div class="box">
           <ul>
             <li>
-              <strong>Sindh School Daily Monitoring System (SSDMS)</strong>: Spearheaded for the Sindh government, enhancing data transparency and providing insights into daily school attendance and resource management.
+              <strong>Sindh School Daily Monitoring System (SSDMS)</strong>:
+              Spearheaded for the Sindh government, enhancing data transparency
+              and providing insights into daily school attendance and resource
+              management.
             </li>
             <li>
-              <strong>UNICEF Child Protection Initiatives</strong>: Developed systems to streamline processes for child protection services, improving data accessibility and workflow efficiency.
+              <strong>UNICEF Child Protection Initiatives</strong>: Developed
+              systems to streamline processes for child protection services,
+              improving data accessibility and workflow efficiency.
             </li>
             <li>
-              <strong>Custom ERP Solutions</strong>: Built and customized ERP systems for clients like Pakistan State Oil and Hyundai Islamabad, improving operational efficiency and data management capabilities.
+              <strong>Custom ERP Solutions</strong>: Built and customized ERP
+              systems for clients like Pakistan State Oil and Hyundai Islamabad,
+              improving operational efficiency and data management capabilities.
             </li>
             <li>
-              <strong>Falaya.com</strong>: Worked as a back-end developer, implementing AWS Lambda functions for PDF processing automation and creating APIs.
+              <strong>Falaya.com</strong>: Worked as a back-end developer,
+              implementing AWS Lambda functions for PDF processing automation
+              and creating APIs.
             </li>
           </ul>
         </div>
@@ -238,19 +277,36 @@
           <h3>Software Engineer at Micromerger Pvt. Ltd.</h3>
           <span>(Aug 2021 - Present)</span>
           <p>
-            Spearheaded projects for the Sindh government, including SSDMS, SELD, and DGME. Collaborated on UNICEF initiatives, utilizing Frappe, Python, and JavaScript. Played a pivotal role in constructing ERP systems for clients like Pakistan State Oil, tailored to unique business needs. Integrated multiple government projects to enhance data transparency.
+            Spearheaded projects for the Sindh government, including SSDMS,
+            SELD, and DGME. Collaborated on UNICEF initiatives, utilizing
+            Frappe, Python, and JavaScript. Played a pivotal role in
+            constructing ERP systems for clients like Pakistan State Oil,
+            tailored to unique business needs. Integrated multiple government
+            projects to enhance data transparency.
           </p>
           <ul>
-            <li>Customized the Frappe Framework design for projects using an app-based approach.</li>
-            <li>Integrated push notifications and SMS services like Twilio and InfoBip for enhanced user engagement.</li>
-            <li>Developed Python scripts for generating tailored reports to streamline data analysis.</li>
+            <li>
+              Customized the Frappe Framework design for projects using an
+              app-based approach.
+            </li>
+            <li>
+              Integrated push notifications and SMS services like Twilio and
+              InfoBip for enhanced user engagement.
+            </li>
+            <li>
+              Developed Python scripts for generating tailored reports to
+              streamline data analysis.
+            </li>
           </ul>
         </div>
         <div class="box">
           <h3>Backend Developer at Asasa.com</h3>
           <span>(Mar 2020 - Jul 2021)</span>
           <p>
-            Part of the team that restructured the back-end for scalability and robustness, developed RESTful APIs using Node.js, and worked on MongoDB schema design for data management. Implemented Firebase Cloud Messaging and Socket.io for real-time notifications.
+            Part of the team that restructured the back-end for scalability and
+            robustness, developed RESTful APIs using Node.js, and worked on
+            MongoDB schema design for data management. Implemented Firebase
+            Cloud Messaging and Socket.io for real-time notifications.
           </p>
         </div>
       </div>
@@ -258,7 +314,11 @@
 
     <footer>
       <p>&copy; 2024 Muhammad Usman</p>
-      <p><a href="https://github.com/usman8786"><i class="bi bi-github"></i> GitHub Profile</a></p>
+      <p>
+        <a href="https://github.com/usman8786"
+          ><i class="bi bi-github"></i> GitHub Profile</a
+        >
+      </p>
     </footer>
   </body>
 </html>
