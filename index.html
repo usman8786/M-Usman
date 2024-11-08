@@ -12,7 +12,6 @@
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css"
     />
-
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
@@ -44,7 +43,7 @@
         font-size: 3.5em;
         margin-bottom: 0.2em;
         font-family: "Montserrat", sans-serif;
-        white-space: nowrap; /* Prevents line break */
+        white-space: nowrap;
       }
       header p {
         font-size: 1.2em;
@@ -61,8 +60,15 @@
         height: 250px;
         border-radius: 50%;
         border: 5px solid #ffdd57;
-        margin-bottom: 1em;
+        margin-bottom: em;
         box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+      }
+      h4 {
+        margin-top: 1.5em; /* Adjust the top margin to create space */
+        margin-bottom: 0.5em; /* Optional: Add a bit of space below if needed */
+        font-size: 1.1em;
+        font-weight: bold;
+        color: #333;
       }
       header a {
         color: #ddd;
@@ -166,14 +172,14 @@
       /* Mobile view adjustments */
       @media (max-width: 768px) {
         header h1 {
-          font-size: 1.8em; /* Smaller font size for mobile */
+          font-size: 1.8em;
         }
         header img {
-          width: 160px; /* Adjust image size for mobile */
+          width: 160px;
           height: 160px;
         }
         header .email {
-          font-size: 0.9em; /* Smaller email font size for mobile */
+          font-size: 0.9em;
         }
       }
     </style>
@@ -197,8 +203,11 @@
           <i class="bi bi-linkedin"></i> LinkedIn
         </a>
         |
-        <a href="https://github.com/usman8786" class="contact-icons" target="_blank">
-          
+        <a
+          href="https://github.com/usman8786"
+          class="contact-icons"
+          target="_blank"
+        >
           <i class="bi bi-github"></i> GitHub
         </a>
       </p>
@@ -278,38 +287,71 @@
         <div class="box">
           <h3>Software Engineer at Micromerger Pvt. Ltd.</h3>
           <span>(Aug 2021 - Present)</span>
-          <p>
-            Spearheaded projects for the Sindh government, including SSDMS,
-            SELD, and DGME. Collaborated on UNICEF initiatives, utilizing
-            Frappe, Python, and JavaScript. Played a pivotal role in
-            constructing ERP systems for clients like Pakistan State Oil,
-            tailored to unique business needs. Integrated multiple government
-            projects to enhance data transparency.
-          </p>
+          <h4>Python / ERPNext</h4>
           <ul>
             <li>
-              Customized the Frappe Framework design for projects using an
-              app-based approach.
+              Spearheaded projects for the Sindh government, including SSDMS,
+              SELD, and DGME.
             </li>
             <li>
-              Integrated push notifications and SMS services like Twilio and
-              InfoBip for enhanced user engagement.
+              Customized Frappe Framework and ERP systems for clients like
+              Pakistan State Oil.
             </li>
             <li>
-              Developed Python scripts for generating tailored reports to
-              streamline data analysis.
+              Developed Python scripts for data analysis and report generation.
+            </li>
+          </ul>
+
+          <h4>Nest.js</h4>
+          <ul>
+            <li>
+              Back-end development for projects like Falaya.com, using AWS
+              Lambda for automation.
+            </li>
+            <li>
+              Integrated push notifications and SMS services for user
+              engagement.
+            </li>
+          </ul>
+
+          <h4>Node.js</h4>
+          <ul>
+            <li>
+              Built RESTful APIs for various applications, enhancing backend
+              functionality and scalability.
+            </li>
+            <li>
+              Optimized back-end services using Node.js, Express, and MongoDB.
+            </li>
+            <li>
+              Worked with front-end teams to implement real-time notifications
+              using Socket.io.
+            </li>
+            <li>
+              Used GitHub for version control and collaborated on code
+              integration.
             </li>
           </ul>
         </div>
+
         <div class="box">
           <h3>Backend Developer at Asasa.com</h3>
           <span>(Mar 2020 - Jul 2021)</span>
-          <p>
-            Part of the team that restructured the back-end for scalability and
-            robustness, developed RESTful APIs using Node.js, and worked on
-            MongoDB schema design for data management. Implemented Firebase
-            Cloud Messaging and Socket.io for real-time notifications.
-          </p>
+          <h4>Node.js</h4>
+          <ul>
+            <li>
+              Restructured the back-end for scalability and robustness using
+              Node.js and MongoDB.
+            </li>
+            <li>
+              Developed RESTful APIs and deployed on Heroku with FCM for mobile
+              notifications.
+            </li>
+            <li>
+              Implemented Socket.io for real-time notifications on the web
+              platform.
+            </li>
+          </ul>
         </div>
       </div>
     </div>
@@ -317,11 +359,14 @@
     <footer>
       <p>&copy; 2024 - 2027 | Muhammad Usman. All rights reserved.</p>
       <p>
-        <a href="https://github.com/usman8786" target="_blank" rel="noopener noreferrer">
+        <a
+          href="https://github.com/usman8786"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
           <i class="bi bi-github"></i> GitHub Profile
         </a>
       </p>
     </footer>
-    
   </body>
 </html>
